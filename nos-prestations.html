@@ -61,7 +61,7 @@
 
 <body>
   <header>
-
+               
             <div class="top">
          <div class="container">
             <div class='row contact-detail flex-middle'>
@@ -150,8 +150,8 @@
 		  <!--
 		  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Zones d'intervention<span class="caret"></span></a>
 			  <ul class="dropdown-menu">
-				<li><a class="" href="electricien-les-ulis">Electricien Les Ulis</a></li>
-            <li><a class="" href="electricien-orsay">Electricien Orsay</a></li>
+				<li><a class="" href="./electricien-les-ulis.html">Electricien Les Ulis</a></li>
+            <li><a class="" href="./electricien-orsay.html">Electricien Orsay</a></li>
 			  </ul>
          </li>
          -->
@@ -170,21 +170,42 @@
    </div>
 </nav>               </div>
                <div class="col-md-12 col-lg-6 text-right hidden-xs">
+                  
+<form role="form" method="post" action="https://jgviaboye9.execute-api.eu-west-3.amazonaws.com/prod/notify" id="rappel_immediat" class="js-notify-form">
+   <input type="hidden" name="lang" value="fr" />
+<input type="hidden" name="type" value="contact" />
+<input type="hidden" name="firstName" value="" />
+<input type="hidden" name="redirectUrl" value="/message-envoye" />
+<input type="hidden" name="key" value="6LdS6uQtAAAAAE-_q3rAcHq_dVsgcX-5ZcQ70nDe" />
+<input type="hidden" name="website" value="539" />
 
-<form role="form" method="post" action="https://formspree.io/f/mzzrbowv" id="rappel_immediat" ><div class="row ">
-
+<div class="row ">
+   
      <div class='col-sm-12 text-right'>
          <div class="form-group has-feedback ">
-            <input type="text" name="phone" id="form_phone" value="" class="form-control" placeholder="Votre numéro de téléphone" >
+            <input type="text" name="phone" id="form_phone" value="" class="form-control" placeholder="Votre numéro de téléphone" >            
                <input type="submit" name="prephone" value="Rappeler" class="btn btn-contact button1">
-
+            
          </div>
       </div>
 
-
+   
 </div>
 
+<!-- no room for the consent + reCAPTCHA block in the one-line bar: it opens
+     in a panel under the field once the visitor focuses it (style.scss) -->
+<div class="rappel-panel">
+   <div class="form-consent form-consent--light">
+  <label class="form-consent__label">
+    <input name="condition" type="checkbox" required />
+    <span>En utilisant ce formulaire, vous acceptez le stockage et la gestion de vos données par ce site *
+      <a href="#" data-toggle="modal" class="link" title="Informations RGPD" data-target="#modal-rgpd"><i class="fa fa-info-circle"></i></a></span>
+  </label>
+  <div class="g-recaptcha" data-sitekey="6LdS6uQtAAAAAB5ClNklmuDmA1_C1naF4hdSI8jt" data-theme="light" data-size="1"></div>
+  <div class="form-response"></div>
+</div>
 
+</div>
 </form><p class="rappel-titre">On vous rappelle immédiatement</p>
                </div>
             </div>
@@ -425,6 +446,7 @@
                   <li><a class="active" href="./nos-prestations.html" title="Contrôle et diagnostic">Contrôle et diagnostic</a></li>
                   <li><a class="" href="./zone-d-intervention.html" title="Zone d&#x27;intervention">Zone d'intervention</a></li>
                   <li><a class="" href="./rallonger-fil-electrique.html" title="Rallonger fil électrique">Rallonger fil électrique</a></li>
+                  <li><a class="" href="./comment-remettre-electricite-apres-coupure.html" title="Comment remettre électricité coupure">Comment remettre électricité coupure</a></li>
                </ul>
             </div>
             <div class='col-sm-4 text-left'>
@@ -433,11 +455,19 @@
             </div>
             <div class="col-sm-4 text-left">
                <h2>Vous souhaitez etre recontacté?</h2>
-               <form role="form" method="post" action="https://formspree.io/f/mzzrbowv" ><div class="row no-gutter">
+               <form role="form" method="post" action="https://jgviaboye9.execute-api.eu-west-3.amazonaws.com/prod/notify" class="js-notify-form">
+   <input type="hidden" name="lang" value="fr" />
+<input type="hidden" name="type" value="contact" />
+<input type="hidden" name="firstName" value="" />
+<input type="hidden" name="redirectUrl" value="/message-envoye" />
+<input type="hidden" name="key" value="6LdS6uQtAAAAAE-_q3rAcHq_dVsgcX-5ZcQ70nDe" />
+<input type="hidden" name="website" value="539" />
+
+<div class="row no-gutter">
    <div class="col-sm-12">
       <div class="col-sm-12">
          <div class="form-group has-feedback ">
-            <input type="text" class="form-control " id="nom" name="nom" value="" placeholder="Nom">
+            <input type="text" class="form-control " id="nom" name="name" value="" placeholder="Nom">
                      </div>
       </div>
       <div class="col-sm-12">
@@ -452,6 +482,16 @@
    </div>
 </div>
 <div class="div01"></div>
+<div class="form-consent form-consent--dark">
+  <label class="form-consent__label">
+    <input name="condition" type="checkbox" required />
+    <span>En utilisant ce formulaire, vous acceptez le stockage et la gestion de vos données par ce site *
+      <a href="#" data-toggle="modal" class="link" title="Informations RGPD" data-target="#modal-rgpd"><i class="fa fa-info-circle"></i></a></span>
+  </label>
+  <div class="g-recaptcha" data-sitekey="6LdS6uQtAAAAAB5ClNklmuDmA1_C1naF4hdSI8jt" data-theme="dark" data-size="compact"></div>
+  <div class="form-response"></div>
+</div>
+
 <div class="row ">
    <div class="col-xs-12 text-left">
       <br>
@@ -481,7 +521,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.fr.min.js" integrity="sha512-fx3aztaUjb4NyoD+Tso5g7R1l29bU3jnnTfNRKBiY9fdQOHzVhKJ10wEAgQ1zM/WXCzB9bnVryHD1M40775Tsw==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous"></script>
   <script src="./assets/ressources/js/owl.carousel.min.js"></script>
-
+  <!-- every form (contact, devis, quote form, footer call-back, header "Rappeler")
+       posts to the BH notify API via formSubmit.js; reCAPTCHA v2 checkboxes are
+       auto-rendered into each form's .g-recaptcha div. The site key is a v2 key,
+       so the boilerplate's v3 helper (assets/js/recaptcha-validation.js,
+       api.js?render=KEY) is not loaded: Google rejects v2 keys in that mode. -->
+  <script src="https://www.google.com/recaptcha/api.js?hl=fr" async defer></script>
+  <script src="./assets/js/formSubmit.js"></script>
 
   <script>
     // devis: date picker; the live site's PHP printed today's date as the placeholder
@@ -517,6 +563,10 @@
       $('#lightbox .lb-cancel').attr('title', 'Annuler');
       $('#lightbox .lb-close').attr('title', 'Fermer');
     });
+
+    // header "Rappeler": reveal its consent + reCAPTCHA panel on first focus,
+    // and keep it open (the captcha's challenge iframe would otherwise lose it)
+    $('#rappel_immediat').on('focusin', function () { $(this).addClass('open'); });
 
     // sticky menu bar. A placeholder keeps its height in the flow while it is
     // fixed, otherwise the page jumps up by the bar's height when it detaches.
